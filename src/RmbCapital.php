@@ -68,7 +68,7 @@ class RmbCapital
 
         // 没有则为 零元
         // 注意，类似：0.07元，应为 人民币柒分
-        if (!$integerResult && !$decimalResult) {
+        if (! $integerResult && ! $decimalResult) {
             $integerResult .= $this->capitalNumber(0);
         }
 
@@ -77,7 +77,7 @@ class RmbCapital
             $integerResult .= '元';
         }
 
-        if (!$decimalResult) {
+        if (! $decimalResult) {
             $integerResult .= '整';
         }
 
@@ -109,7 +109,7 @@ class RmbCapital
 
         $last = null;
         foreach (array_chunk($integerNumbers, 4) as $chunkKey => $chunk) {
-            if (!((int) implode('', $chunk))) {
+            if (! ((int) implode('', $chunk))) {
                 // 全是 0 则直接跳过
                 continue;
             }
@@ -118,8 +118,9 @@ class RmbCapital
 
             foreach ($chunk as $key => $number) {
                 // 去除重复 零，以及第一位的 零，类似：1002、110，应为 壹仟零贰元整、壹佰壹拾元整
-                if (!$number && (!$last || $key === 0)) {
+                if (! $number && (! $last || $key === 0)) {
                     $last = $number;
+
                     continue;
                 }
                 $last = $number;
@@ -151,7 +152,7 @@ class RmbCapital
         $integer = trim($parts[0] ?? '', '-');
         $decimal = $parts[1] ?? '';
 
-        if (!((int) $decimal)) {
+        if (! ((int) $decimal)) {
             $decimal = '';
         }
 
@@ -161,7 +162,7 @@ class RmbCapital
         if ($jiao) {
             array_push($result, $this->capitalNumber($jiao), $this->decimalUnits[0]);
 
-            if (!count(array_filter($decimalNumbers))) {
+            if (! count(array_filter($decimalNumbers))) {
                 array_push($result, '整');
             }
         } else {
@@ -184,7 +185,7 @@ class RmbCapital
     /**
      * 获取数字的大写
      *
-     * @param  integer  $number
+     * @param  int  $number
      * @return string
      */
     public function capitalNumber(int $number)
