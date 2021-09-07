@@ -22,7 +22,7 @@ composer require chuoke/rmb-capital
 ## 使用
 
 ```php
-$rmbCapital = new Chuoke\RmbCapital();
+$rmbCapital = new Chuoke\RmbCapital\RmbCapital();
 
 echo $rmbCapital->convert(123456789.01);
 // 人民币壹亿贰仟叁佰肆拾伍万陆仟柒佰捌拾玖元零壹分
