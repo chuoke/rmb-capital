@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/chuoke/rmb-capital.svg?style=flat-square)](https://packagist.org/packages/chuoke/rmb-capital)
 [![Tests](https://github.com/chuoke/rmb-capital/actions/workflows/run-tests.yml/badge.svg)](https://github.com/chuoke/rmb-capital/actions/workflows/run-tests.yml)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/chuoke/rmb-capital/Check%20&%20fix%20styling?label=code%20style)](https://github.com/chuoke/rmb-capital/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
+[![Check & fix styling](https://github.com/chuoke/rmb-capital/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/chuoke/rmb-capital/actions/workflows/php-cs-fixer.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/chuoke/rmb-capital.svg?style=flat-square)](https://packagist.org/packages/chuoke/rmb-capital)
 
 ---
